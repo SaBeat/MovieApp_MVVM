@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/popularMovieFragment"
+        android:icon="@drawable/ic_baseline_local_movies_24"
+        android:title="Popular"/>
+
+    <item android:id="@+id/savedFragment"
+        android:icon="@drawable/ic_baseline_save_alt_24"
+        android:title="Save"/>
+
+    <item android:id="@+id/searchFragment"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search"/>
+
+</menu>
