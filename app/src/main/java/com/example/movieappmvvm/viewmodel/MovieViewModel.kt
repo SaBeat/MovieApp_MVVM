@@ -28,13 +28,27 @@ class MovieViewModel(val repository: MovieRepository):ViewModel() {
          popularMovies.postValue(handlePopularMovieResponse(response))
      }
 
-   // fun getSearchMovies()
+    fun getSearchMovies(apiKey: String,query:String)=viewModelScope.launch {
+
+        searchMovie.postValue(Resource.Loading())
+        val response=repository.getMovieSearch(apiKey,query,searchMoviePage)
+        searchMovie.postValue(handleSearchNewsResponse(response))
+    }
 
 
     private fun handlePopularMovieResponse(response: Response<MovieResponse>):Resource<MovieResponse>{
         if(response.isSuccessful){
             response.body()?.let {
                 return Resource.Success(it)
+            }
+        }
+        return Resource.Error(response.message())
+    }
+
+    private fun handleSearchNewsResponse(response: Response<MovieResponse>) : Resource<MovieResponse> {
+        if(response.isSuccessful) {
+            response.body()?.let { resultResponse ->
+                return Resource.Success(resultResponse)
             }
         }
         return Resource.Error(response.message())
