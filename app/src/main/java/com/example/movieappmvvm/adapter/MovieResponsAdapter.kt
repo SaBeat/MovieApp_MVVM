@@ -42,8 +42,6 @@ class MovieResponsAdapter:RecyclerView.Adapter<MovieResponsAdapter.MyViewHolder>
 
         Glide.with(holder.itemView.image_popular).load("https://image.tmdb.org/t/p/w500/"+a.poster_path).into(holder.itemView.image_popular)
 
-
-
     }
 
     override fun getItemCount(): Int {
