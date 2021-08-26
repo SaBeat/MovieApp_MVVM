@@ -3,14 +3,12 @@ package com.example.movieappmvvm.ui.fragments
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieappmvvm.R
-import com.example.movieappmvvm.adapter.MovieResponsAdapter
+import com.example.movieappmvvm.adapter.SearchAdapter
 import com.example.movieappmvvm.resources.Resource
 import com.example.movieappmvvm.ui.MainActivity
 import com.example.movieappmvvm.util.Utils.Companion.API_KEY
@@ -24,7 +22,7 @@ import kotlinx.coroutines.launch
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
     lateinit var viewModel: MovieViewModel
-    lateinit var movieResponsAdapter: MovieResponsAdapter
+    lateinit var movieResponsAdapter: SearchAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -75,12 +73,17 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     }
 
     private fun setupRecyclerView() {
-        movieResponsAdapter = MovieResponsAdapter()
+        movieResponsAdapter = SearchAdapter()
         rvSearchNews.apply {
             adapter = movieResponsAdapter
             layoutManager = LinearLayoutManager(activity)
         }
     }
+
+//    override fun itemClickListener(result: Result) {
+//        findNavController().navigate(R.id.action_searchFragment_to_detailFragment)
+//        Toast.makeText(context, "Done", Toast.LENGTH_SHORT).show()
+//    }
 
 
 }

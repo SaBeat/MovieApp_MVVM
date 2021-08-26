@@ -7,14 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.navigation.NavArgs
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.adapter.MovieResponsAdapter
+import com.example.movieappmvvm.model.Result
 import com.example.movieappmvvm.resources.Resource
 import com.example.movieappmvvm.ui.MainActivity
 import com.example.movieappmvvm.util.Utils.Companion.API_KEY
 import com.example.movieappmvvm.viewmodel.MovieViewModel
+import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.android.synthetic.main.fragment_popular_movie.*
+import kotlinx.android.synthetic.main.popular_movie_row.*
 
 
 class PopularMovieFragment : Fragment(R.layout.fragment_popular_movie) {
@@ -64,5 +70,10 @@ class PopularMovieFragment : Fragment(R.layout.fragment_popular_movie) {
             layoutManager = LinearLayoutManager(activity)
         }
     }
+
+//    override fun itemClickListener(result: Result) {
+//        TODO("Not yet implemented")
+//    }
+
 
 }

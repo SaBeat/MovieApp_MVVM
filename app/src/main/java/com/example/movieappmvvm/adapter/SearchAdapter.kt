@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.model.Result
-import com.example.movieappmvvm.ui.fragments.PopularMovieFragmentDirections
+import com.example.movieappmvvm.ui.fragments.SearchFragmentDirections
 import kotlinx.android.synthetic.main.popular_movie_row.view.*
 
-class MovieResponsAdapter():RecyclerView.Adapter<MovieResponsAdapter.MyViewHolder>(){
+class SearchAdapter(): RecyclerView.Adapter<SearchAdapter.MyViewHolder>(){
 
-    inner class MyViewHolder(view: View):RecyclerView.ViewHolder(view)
+    inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view)
 
 
 
@@ -45,18 +45,13 @@ class MovieResponsAdapter():RecyclerView.Adapter<MovieResponsAdapter.MyViewHolde
 
         holder.itemView.row_layout.setOnClickListener {
             //onItemClickListener?.let { it(a) }
-            val direction=PopularMovieFragmentDirections.actionPopularMovieFragmentToDetailFragment(a)
+            val direction= SearchFragmentDirections.actionSearchFragmentToDetailFragment(a)
             it.findNavController().navigate(direction)
         }
 
         Glide.with(holder.itemView.image_popular).load("https://image.tmdb.org/t/p/w500/"+a.poster_path).into(holder.itemView.image_popular)
 
     }
-
-    interface ClickListener{
-        fun itemClickListener(result: Result)
-    }
-
 
     override fun getItemCount(): Int {
         return differ.currentList.size

@@ -18,7 +18,11 @@
         android:id="@+id/detailFragment"
         android:name="com.example.movieappmvvm.ui.fragments.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="now"
+            app:argType="com.example.movieappmvvm.model.Result" />
+    </fragment>
     <fragment
         android:id="@+id/savedFragment"
         android:name="com.example.movieappmvvm.ui.fragments.SavedFragment"

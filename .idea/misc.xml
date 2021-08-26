@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/drawable/bg_card.xml" value="0.20260416666666667" />
+        <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.20260416666666667" />
+        <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.20260416666666667" />
+        <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/drawable/search_et_bg.xml" value="0.20260416666666667" />
         <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/layout/activity_main.xml" value="0.17239583333333333" />
-        <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/layout/fragment_detail.xml" value="0.18645833333333334" />
+        <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/layout/fragment_detail.xml" value="0.25" />
         <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/layout/fragment_popular_movie.xml" value="0.18645833333333334" />
         <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/layout/fragment_saved.xml" value="0.17239583333333333" />
         <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/layout/fragment_search.xml" value="0.2" />
-        <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/layout/popular_movie_row.xml" value="0.22" />
+        <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/layout/popular_movie_row.xml" value="0.2" />
         <entry key="..\:/Projects-Android/Android-Kotlin/MovieApp_MVVM/app/src/main/res/menu/bottom_menu.xml" value="0.18645833333333334" />
       </map>
     </option>
