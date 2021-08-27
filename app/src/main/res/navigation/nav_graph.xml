@@ -22,6 +22,9 @@
         <argument
             android:name="now"
             app:argType="com.example.movieappmvvm.model.Result" />
+        <action
+            android:id="@+id/action_detailFragment_to_savedFragment"
+            app:destination="@id/savedFragment" />
     </fragment>
     <fragment
         android:id="@+id/savedFragment"

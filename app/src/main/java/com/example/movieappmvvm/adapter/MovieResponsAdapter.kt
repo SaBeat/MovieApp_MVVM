@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.model.Result
 import com.example.movieappmvvm.ui.fragments.PopularMovieFragmentDirections
+import com.example.movieappmvvm.util.Utils.Companion.IMAGE_END_POINT
 import kotlinx.android.synthetic.main.popular_movie_row.view.*
 
 class MovieResponsAdapter():RecyclerView.Adapter<MovieResponsAdapter.MyViewHolder>(){
@@ -39,9 +40,8 @@ class MovieResponsAdapter():RecyclerView.Adapter<MovieResponsAdapter.MyViewHolde
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val a=differ.currentList[position]
 
-        holder.itemView.release_date.text="Release date: "+a.release_date
-        holder.itemView.original_title.text=a.original_title
-        holder.itemView.vote_averege.text="Vote average: "+a.vote_average.toString()
+        holder.itemView.text_release_date.text=a.release_date
+        holder.itemView.text_title.text=a.original_title
 
         holder.itemView.row_layout.setOnClickListener {
             //onItemClickListener?.let { it(a) }
@@ -49,12 +49,8 @@ class MovieResponsAdapter():RecyclerView.Adapter<MovieResponsAdapter.MyViewHolde
             it.findNavController().navigate(direction)
         }
 
-        Glide.with(holder.itemView.image_popular).load("https://image.tmdb.org/t/p/w500/"+a.poster_path).into(holder.itemView.image_popular)
+        Glide.with(holder.itemView.image_popular).load(IMAGE_END_POINT+a.poster_path).into(holder.itemView.image_popular)
 
-    }
-
-    interface ClickListener{
-        fun itemClickListener(result: Result)
     }
 
 

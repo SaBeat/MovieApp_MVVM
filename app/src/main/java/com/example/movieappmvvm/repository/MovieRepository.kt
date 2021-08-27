@@ -7,8 +7,14 @@ import retrofit2.Retrofit
 
 class MovieRepository(val db: MovieDatabase) {
 
-    suspend fun getPopularMovies(apiKey:String,page: Int) = RetrofitClient.getApi
+    suspend fun getPopularMovie(apiKey:String,page: Int) = RetrofitClient.getApi
         .getPopularMovie(apiKey,page)
+
+    suspend fun getTopRatedMovie(apiKey: String,page: Int)=RetrofitClient.getApi
+        .getTopRatedMovie(apiKey,page)
+
+    suspend fun getUpcomingMovie(apiKey: String,page: Int)=RetrofitClient.getApi
+        .getUpcomingMovie(apiKey,page)
 
     suspend fun getMovieSearch(apiKey: String,query:String,page:Int)=RetrofitClient.getApi
         .getMovieSearch(apiKey,query,page)
