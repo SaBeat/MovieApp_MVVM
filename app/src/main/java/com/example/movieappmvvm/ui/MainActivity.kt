@@ -30,5 +30,8 @@ class MainActivity : AppCompatActivity() {
             ViewModelProvider(this, viewModelProviderFactory).get(MovieViewModel::class.java)
         val navHostFragment = supportFragmentManager.findFragmentById(com.example.movieappmvvm.R.id.nav_host_fragment_container) as NavHostFragment?
         NavigationUI.setupWithNavController(bottomNavigationView, navHostFragment!!.navController)
+
+
     }
+
 }

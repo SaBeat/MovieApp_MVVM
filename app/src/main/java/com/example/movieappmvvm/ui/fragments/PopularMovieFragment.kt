@@ -13,7 +13,6 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.example.movieappmvvm.R
-import com.example.movieappmvvm.adapter.MovieResponsAdapter
 import com.example.movieappmvvm.adapter.ViewPagerAdapter
 import com.example.movieappmvvm.model.Result
 import com.example.movieappmvvm.resources.Resource

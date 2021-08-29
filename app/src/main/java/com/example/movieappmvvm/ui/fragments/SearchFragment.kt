@@ -8,6 +8,7 @@ import android.view.WindowManager
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.adapter.SearchAdapter
 import com.example.movieappmvvm.resources.Resource
@@ -77,14 +78,11 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         movieResponsAdapter = SearchAdapter()
         rvSearchNews.apply {
             adapter = movieResponsAdapter
-            layoutManager = LinearLayoutManager(activity)
+            layoutManager = StaggeredGridLayoutManager(
+                2, // span count
+                StaggeredGridLayoutManager.VERTICAL
+            )
         }
     }
-
-//    override fun itemClickListener(result: Result) {
-//        findNavController().navigate(R.id.action_searchFragment_to_detailFragment)
-//        Toast.makeText(context, "Done", Toast.LENGTH_SHORT).show()
-//    }
-
 
 }

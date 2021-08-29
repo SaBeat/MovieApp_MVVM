@@ -1,8 +1,10 @@
 package com.example.movieappmvvm.adapter
 
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.movieappmvvm.R
 import com.example.movieappmvvm.ui.fragments.films.UpcomingFragment
 import com.example.movieappmvvm.ui.fragments.films.PopularFragment
 import com.example.movieappmvvm.ui.fragments.films.TopRatedFragment
@@ -38,10 +40,14 @@ class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
                 return "Top Rated"
             }
             2 -> {
-                return "Latest"
+                return "Upcoming"
             }
         }
         return super.getPageTitle(position)
+    }
+
+    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
+        super.destroyItem(container, position, `object`)
     }
 
 }

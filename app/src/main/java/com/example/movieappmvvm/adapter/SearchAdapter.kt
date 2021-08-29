@@ -40,11 +40,9 @@ class SearchAdapter(): RecyclerView.Adapter<SearchAdapter.MyViewHolder>(){
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val a=differ.currentList[position]
 
-        holder.itemView.text_release_date.text="Release date: "+a.release_date
         holder.itemView.text_title.text=a.original_title
 
         holder.itemView.row_layout.setOnClickListener {
-            //onItemClickListener?.let { it(a) }
             val direction= SearchFragmentDirections.actionSearchFragmentToDetailFragment(a)
             it.findNavController().navigate(direction)
         }

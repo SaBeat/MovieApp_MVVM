@@ -46,9 +46,17 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         text_detail_title.text=title
         text_detail_overview.text=overview
 
+        btn_fab.setImageResource(R.drawable.ic_baseline_favorite_border_24)
         btn_fab.setOnClickListener {
             viewModel.saveResult(result)
             Snackbar.make(view, "Movie saved successfully", Snackbar.LENGTH_SHORT).show()
+            btn_fab.setImageResource(R.drawable.ic_baseline_favorite_24)
         }
+
+        back_detail_image.setOnClickListener {
+            val direction=DetailFragmentDirections.actionDetailFragmentToPopularMovieFragment()
+            findNavController().navigate(direction)
+        }
+
     }
 }

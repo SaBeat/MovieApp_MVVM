@@ -25,6 +25,15 @@
         <action
             android:id="@+id/action_detailFragment_to_savedFragment"
             app:destination="@id/savedFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_savedFragment"
+            app:destination="@id/savedFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_popularMovieFragment"
+            app:destination="@id/popularMovieFragment" />
     </fragment>
     <fragment
         android:id="@+id/savedFragment"

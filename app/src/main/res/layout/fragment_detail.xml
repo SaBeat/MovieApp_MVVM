@@ -13,7 +13,7 @@
 
         <ImageView
             android:id="@+id/image_detail_backdrop"
-            android:layout_width="0dp"
+            android:layout_width="411dp"
             android:layout_height="250dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
@@ -22,27 +22,25 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image_detail_poster"
             android:layout_width="196dp"
             android:layout_height="196dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="130dp"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
-            android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/image_detail_backdrop"
             tools:src="@tools:sample/backgrounds/scenic" />
 
         <TextView
             android:id="@+id/text_detail_title"
-            android:layout_width="395dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="Title"
@@ -54,14 +52,14 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cardView"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:paddingBottom="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/bg_card"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_detail_title">
 
@@ -80,32 +78,32 @@
 
             <TextView
                 android:id="@+id/text_detail_overview"
-                android:layout_width="392dp"
-                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:layout_marginEnd="8dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
                 android:text="Overview"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/bg_card"
+            android:paddingBottom="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView">
@@ -118,7 +116,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Release Date"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -131,7 +129,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Popularity"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_details_releasedate" />
@@ -144,7 +142,7 @@
                 android:layout_marginTop="8dp"
                 android:text="VoteAverege"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_details_popularity" />
@@ -156,14 +154,24 @@
             android:id="@+id/btn_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/ic_baseline_favorite_24"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="28dp"
             android:tint="@color/purple_200"
+            app:layout_constraintBottom_toTopOf="@+id/text_detail_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.574"
             app:layout_constraintStart_toEndOf="@+id/image_detail_poster"
             app:layout_constraintTop_toBottomOf="@+id/image_detail_backdrop" />
+
+        <ImageView
+            android:id="@+id/back_detail_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

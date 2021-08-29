@@ -39,12 +39,9 @@ class MovieResponsAdapter():RecyclerView.Adapter<MovieResponsAdapter.MyViewHolde
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val a=differ.currentList[position]
-
-        holder.itemView.text_release_date.text=a.release_date
         holder.itemView.text_title.text=a.original_title
 
         holder.itemView.row_layout.setOnClickListener {
-            //onItemClickListener?.let { it(a) }
             val direction=PopularMovieFragmentDirections.actionPopularMovieFragmentToDetailFragment(a)
             it.findNavController().navigate(direction)
         }

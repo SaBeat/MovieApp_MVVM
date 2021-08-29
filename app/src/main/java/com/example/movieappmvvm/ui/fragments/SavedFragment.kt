@@ -1,5 +1,6 @@
 package com.example.movieappmvvm.ui.fragments
 
+import android.icu.lang.UCharacter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.adapter.MovieResponsAdapter
 import com.example.movieappmvvm.ui.MainActivity
@@ -65,7 +67,9 @@ class SavedFragment : Fragment(R.layout.fragment_saved) {
         movieresponseAdapter = MovieResponsAdapter()
         rv_saved.apply {
             adapter = movieresponseAdapter
-            layoutManager = LinearLayoutManager(activity)
+            layoutManager = StaggeredGridLayoutManager(
+                2, StaggeredGridLayoutManager.VERTICAL
+            )
         }
     }
 }
