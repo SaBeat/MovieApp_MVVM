@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide.with
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.model.Result
 import com.example.movieappmvvm.ui.MainActivity
-import com.example.movieappmvvm.util.Utils.Companion.IMAGE_END_POINT
+import com.example.movieappmvvm.util.Utils.IMAGE_END_POINT
 import com.example.movieappmvvm.viewmodel.MovieViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
@@ -46,7 +46,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         text_detail_title.text=title
         text_detail_overview.text=overview
 
-        btn_fab.setImageResource(R.drawable.ic_baseline_favorite_border_24)
         btn_fab.setOnClickListener {
             viewModel.saveResult(result)
             Snackbar.make(view, "Movie saved successfully", Snackbar.LENGTH_SHORT).show()

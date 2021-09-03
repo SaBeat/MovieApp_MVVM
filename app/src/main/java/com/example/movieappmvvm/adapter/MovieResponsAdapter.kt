@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.model.Result
 import com.example.movieappmvvm.ui.fragments.PopularMovieFragmentDirections
-import com.example.movieappmvvm.util.Utils.Companion.IMAGE_END_POINT
+import com.example.movieappmvvm.util.Utils.IMAGE_END_POINT
 import kotlinx.android.synthetic.main.popular_movie_row.view.*
 
 class MovieResponsAdapter():RecyclerView.Adapter<MovieResponsAdapter.MyViewHolder>(){
@@ -46,7 +46,9 @@ class MovieResponsAdapter():RecyclerView.Adapter<MovieResponsAdapter.MyViewHolde
             it.findNavController().navigate(direction)
         }
 
-        Glide.with(holder.itemView.image_popular).load(IMAGE_END_POINT+a.poster_path).into(holder.itemView.image_popular)
+        Glide.with(holder.itemView.image_popular).load(IMAGE_END_POINT+a.poster_path)
+            .centerCrop()
+            .into(holder.itemView.image_popular)
 
     }
 

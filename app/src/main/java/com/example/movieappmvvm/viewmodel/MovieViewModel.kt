@@ -7,24 +7,18 @@ import com.example.movieappmvvm.model.MovieResponse
 import com.example.movieappmvvm.model.Result
 import com.example.movieappmvvm.repository.MovieRepository
 import com.example.movieappmvvm.resources.Resource
-import com.example.movieappmvvm.util.Utils.Companion.API_KEY
+import com.example.movieappmvvm.util.Utils
+import com.example.movieappmvvm.util.Utils.API_KEY
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class MovieViewModel(val repository: MovieRepository):ViewModel() {
 
     val popularMovies:MutableLiveData<Resource<MovieResponse>> = MutableLiveData()
-    val popularMoviePage=1
-
     val topRatedMovies:MutableLiveData<Resource<MovieResponse>> = MutableLiveData()
-    val topRatedMoviePage=1
-
     val upcomingMovies:MutableLiveData<Resource<MovieResponse>> = MutableLiveData()
-    val upcomingMoviesPage=1
-
-
     val searchMovie:MutableLiveData<Resource<MovieResponse>> = MutableLiveData()
-    val searchMoviePage=1
+
 
     init {
         getPopularMovies(API_KEY)
@@ -34,61 +28,34 @@ class MovieViewModel(val repository: MovieRepository):ViewModel() {
 
      fun getPopularMovies(apiKey:String)=viewModelScope.launch {
          popularMovies.postValue(Resource.Loading())
-         val response=repository.getPopularMovie(apiKey,popularMoviePage)
-         popularMovies.postValue(handlePopularMovieResponse(response))
+         val response=repository.getPopularMovie(apiKey, Utils.moviePage)
+         popularMovies.postValue(handleMovies(response))
      }
 
     fun getTopRatedMovies(apiKey: String)=viewModelScope.launch {
         topRatedMovies.postValue(Resource.Loading())
-        val response=repository.getTopRatedMovie(apiKey,topRatedMoviePage)
-        topRatedMovies.postValue(handleTopRatedMovieResponse(response))
+        val response=repository.getTopRatedMovie(apiKey,Utils.moviePage)
+        topRatedMovies.postValue(handleMovies(response))
     }
 
     fun getUpcomingMovies(apiKey: String)=viewModelScope.launch {
         upcomingMovies.postValue(Resource.Loading())
-        val response=repository.getUpcomingMovie(apiKey,upcomingMoviesPage)
-        upcomingMovies.postValue(handleUpcomingMovieResponse(response))
+        val response=repository.getUpcomingMovie(apiKey,Utils.moviePage)
+        upcomingMovies.postValue(handleMovies(response))
     }
 
     fun getSearchMovies(apiKey: String,query:String)=viewModelScope.launch {
 
         searchMovie.postValue(Resource.Loading())
-        val response=repository.getMovieSearch(apiKey,query,searchMoviePage)
-        searchMovie.postValue(handleSearchNewsResponse(response))
+        val response=repository.getMovieSearch(apiKey,query,Utils.moviePage)
+        searchMovie.postValue(handleMovies(response))
     }
 
 
-    private fun handlePopularMovieResponse(response: Response<MovieResponse>):Resource<MovieResponse>{
+    private fun handleMovies(response: Response<MovieResponse>):Resource<MovieResponse>{
         if(response.isSuccessful){
             response.body()?.let {
                 return Resource.Success(it)
-            }
-        }
-        return Resource.Error(response.message())
-    }
-
-    private fun handleTopRatedMovieResponse(response: Response<MovieResponse>):Resource<MovieResponse>{
-        if(response.isSuccessful){
-            response.body()?.let {
-                return Resource.Success(it)
-            }
-        }
-        return Resource.Error(response.message())
-    }
-
-    private fun handleUpcomingMovieResponse(response: Response<MovieResponse>):Resource<MovieResponse>{
-        if(response.isSuccessful){
-            response.body()?.let {
-                return Resource.Success(it)
-            }
-        }
-        return Resource.Error(response.message())
-    }
-
-    private fun handleSearchNewsResponse(response: Response<MovieResponse>) : Resource<MovieResponse> {
-        if(response.isSuccessful) {
-            response.body()?.let { resultResponse ->
-                return Resource.Success(resultResponse)
             }
         }
         return Resource.Error(response.message())

@@ -23,17 +23,14 @@
             android:name="now"
             app:argType="com.example.movieappmvvm.model.Result" />
         <action
-            android:id="@+id/action_detailFragment_to_savedFragment"
-            app:destination="@id/savedFragment" />
-        <action
             android:id="@+id/action_detailFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
         <action
-            android:id="@+id/action_detailFragment_to_savedFragment"
-            app:destination="@id/savedFragment" />
-        <action
             android:id="@+id/action_detailFragment_to_popularMovieFragment"
             app:destination="@id/popularMovieFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_savedFragment"
+            app:destination="@id/savedFragment" />
     </fragment>
     <fragment
         android:id="@+id/savedFragment"

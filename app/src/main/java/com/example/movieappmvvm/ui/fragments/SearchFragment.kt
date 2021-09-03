@@ -4,16 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.view.WindowManager
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.adapter.SearchAdapter
 import com.example.movieappmvvm.resources.Resource
 import com.example.movieappmvvm.ui.MainActivity
-import com.example.movieappmvvm.util.Utils.Companion.API_KEY
+import com.example.movieappmvvm.util.Utils.API_KEY
 import com.example.movieappmvvm.viewmodel.MovieViewModel
 import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.coroutines.Job
