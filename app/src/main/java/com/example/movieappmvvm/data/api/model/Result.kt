@@ -1,9 +1,8 @@
-package com.example.movieappmvvm.model
+package com.example.movieappmvvm.data.api.model
 
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 @Entity(tableName = "result_table")

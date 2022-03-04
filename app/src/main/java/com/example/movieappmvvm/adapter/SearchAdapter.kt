@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieappmvvm.R
-import com.example.movieappmvvm.model.Result
+import com.example.movieappmvvm.data.api.model.Result
 import com.example.movieappmvvm.ui.fragments.SearchFragmentDirections
 import com.example.movieappmvvm.util.Utils.IMAGE_END_POINT
 import kotlinx.android.synthetic.main.popular_movie_row.view.*

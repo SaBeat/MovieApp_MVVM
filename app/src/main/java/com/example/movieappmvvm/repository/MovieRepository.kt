@@ -1,9 +1,8 @@
 package com.example.movieappmvvm.repository
 
-import com.example.movieappmvvm.api.RetrofitClient
-import com.example.movieappmvvm.db.MovieDatabase
-import com.example.movieappmvvm.model.Result
-import retrofit2.Retrofit
+import com.example.movieappmvvm.data.api.RetrofitClient
+import com.example.movieappmvvm.data.api.db.MovieDatabase
+import com.example.movieappmvvm.data.api.model.Result
 
 class MovieRepository(val db: MovieDatabase) {
 

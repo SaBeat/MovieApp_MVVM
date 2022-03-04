@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
-import com.example.movieappmvvm.db.MovieDatabase
+import com.example.movieappmvvm.data.api.db.MovieDatabase
 import com.example.movieappmvvm.repository.MovieRepository
 import com.example.movieappmvvm.viewmodel.MovieViewModel
 import com.example.movieappmvvm.viewmodel.MovieViewModelFactory

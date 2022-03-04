@@ -3,10 +3,10 @@ package com.example.movieappmvvm.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.movieappmvvm.model.MovieResponse
-import com.example.movieappmvvm.model.Result
+import com.example.movieappmvvm.data.api.model.MovieResponse
+import com.example.movieappmvvm.data.api.model.Result
 import com.example.movieappmvvm.repository.MovieRepository
-import com.example.movieappmvvm.resources.Resource
+import com.example.movieappmvvm.util.resources.Resource
 import com.example.movieappmvvm.util.Utils
 import com.example.movieappmvvm.util.Utils.API_KEY
 import kotlinx.coroutines.launch

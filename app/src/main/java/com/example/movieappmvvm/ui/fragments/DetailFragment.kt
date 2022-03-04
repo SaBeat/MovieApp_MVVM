@@ -2,20 +2,16 @@ package com.example.movieappmvvm.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import com.bumptech.glide.Glide.with
 import com.example.movieappmvvm.R
-import com.example.movieappmvvm.model.Result
+import com.example.movieappmvvm.data.api.model.Result
 import com.example.movieappmvvm.ui.MainActivity
 import com.example.movieappmvvm.util.Utils.IMAGE_END_POINT
 import com.example.movieappmvvm.viewmodel.MovieViewModel
 import com.google.android.material.snackbar.Snackbar
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_detail.*
 
 

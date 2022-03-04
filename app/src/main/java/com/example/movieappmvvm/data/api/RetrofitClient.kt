@@ -1,4 +1,4 @@
-package com.example.movieappmvvm.api
+package com.example.movieappmvvm.data.api
 
 import com.example.movieappmvvm.util.Utils.BASE_URL
 import okhttp3.OkHttpClient

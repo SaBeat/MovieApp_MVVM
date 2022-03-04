@@ -6,13 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.adapter.MovieResponsAdapter
-import com.example.movieappmvvm.resources.Resource
+import com.example.movieappmvvm.util.resources.Resource
 import com.example.movieappmvvm.ui.MainActivity
 import com.example.movieappmvvm.viewmodel.MovieViewModel
-import kotlinx.android.synthetic.main.fragment_popular.*
 import kotlinx.android.synthetic.main.fragment_upcoming.*
 
 

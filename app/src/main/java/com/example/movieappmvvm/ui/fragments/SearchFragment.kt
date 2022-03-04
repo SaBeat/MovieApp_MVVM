@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.movieappmvvm.R
 import com.example.movieappmvvm.adapter.SearchAdapter
-import com.example.movieappmvvm.resources.Resource
+import com.example.movieappmvvm.util.resources.Resource
 import com.example.movieappmvvm.ui.MainActivity
 import com.example.movieappmvvm.util.Utils.API_KEY
 import com.example.movieappmvvm.viewmodel.MovieViewModel

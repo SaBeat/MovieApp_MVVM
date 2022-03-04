@@ -1,8 +1,8 @@
-package com.example.movieappmvvm.db
+package com.example.movieappmvvm.data.api.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.movieappmvvm.model.Result
+import com.example.movieappmvvm.data.api.model.Result
 
 @Dao
 interface MovieDao {

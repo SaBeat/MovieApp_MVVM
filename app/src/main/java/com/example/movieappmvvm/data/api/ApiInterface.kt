@@ -1,6 +1,6 @@
-package com.example.movieappmvvm.api
+package com.example.movieappmvvm.data.api
 
-import com.example.movieappmvvm.model.MovieResponse
+import com.example.movieappmvvm.data.api.model.MovieResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
